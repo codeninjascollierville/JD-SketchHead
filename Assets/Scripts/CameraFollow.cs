@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    //Target object poition
+    [Header("Target Object")]
+    public Transform target;
     // Start is called before the first frame update
     void Start()
     {
-
+        //If target position on the y axis is greater
+        //Than the camera podition
+        if(target.position.y > transform.position.y)
+        {
+            //Thr camera will follow the targets position
+            transform.position= new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
+        }
     }
 
     // Update is called once per frame

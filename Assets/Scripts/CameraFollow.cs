@@ -10,18 +10,18 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //If target position on the y axis is greater
-        //Than the camera podition
-        if(target.position.y > transform.position.y)
-        {
-            //Thr camera will follow the targets position
-            transform.position= new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //If target position on the y axis is greater
+        //Than the camera podition
+        if (target.position.y > transform.position.y)
+        {
+            //Thr camera will follow the targets position
+            transform.position = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
+        }
     }
 }

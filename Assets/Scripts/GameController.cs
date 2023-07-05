@@ -37,4 +37,10 @@ public class GameController : MonoBehaviour
         Instantiate(platform, new Vector3(Random.value * 10 - 5f, pos, 0.5f), Quaternion.identity);
         pos += 2.5f;
     }
+
+    public void GameOver()
+    {
+        //Game over canvas is active
+        gameOverCanvas.SetActive(true);
+    }
 }
